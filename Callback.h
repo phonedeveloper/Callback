@@ -38,6 +38,9 @@
  */
 #include "Arduino.h"
 
+// Update this whenever releasing a new version of the library to Github
+const static char* CALLBACK_LIBRARY_VERSION = "0.0.2";
+
 /*
  * These typedefs define pointers to functions that take different data types as parameters.
  */
@@ -56,12 +59,8 @@ typedef void (*CallbackTakesDouble)(double);
 typedef void (*CallbackTakesVoidPointer)(void*);
 
 /**
- * @class Callable
- * @author Sean Sheedy
- * @date 10/10/2015
- * @file Callback.h
- * @brief Provides a callback method for class instances wishing to be called back
- * 
+ * Provides a callback method for class instances wishing to be called back
+ * The callback accepts a void pointer which can be used for lots of things.
  * 
  */
 class Callable
